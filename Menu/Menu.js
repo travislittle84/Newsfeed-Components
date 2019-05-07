@@ -1,7 +1,15 @@
 
 const toggleMenu = () => {
   // Toggle the "menu--open" class on your menu refence.
-  menu.classList.toggle('menu--open');
+  // menu.classList.toggle('menu--open');
+  $(document).ready(function(){
+      if (menu.style.display == '' || menu.style.display == 'none'){
+        $(".menu").slideDown("fast", "swing");
+      } else {
+        $(".menu").slideUp("fast");
+      }
+      
+    });
 }
 
 // Start Here: Create a reference to the ".menu" class
