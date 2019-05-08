@@ -14,9 +14,25 @@ class Article {
     });  
   }
 
+  updateClassList() {
+    this.domElement.classList.toggle('article-open');
+  }
+
   expandArticle() {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
-    this.domElement.classList.toggle('article-open');
+    // this.domElement.classList.toggle('article-open');
+    $(document).ready(() => {
+      if(this.domElement.classList.contains('article-open') == false){
+        $(this.domElement).animate({
+        height: '+=400px'
+        }, this.updateClassList());
+      } else {
+        $(this.domElement).animate({
+          height: '-=400px'
+        }, this.updateClassList())
+      }
+      
+    });
   }
 }
 

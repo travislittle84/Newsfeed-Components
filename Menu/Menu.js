@@ -7,8 +7,7 @@ const toggleMenu = () => {
         $(".menu").slideDown("fast", "swing");
       } else {
         $(".menu").slideUp("fast");
-      }
-      
+      }      
     });
 }
 
